@@ -74,16 +74,25 @@ FUNCTION main(reference, query)
 
 # Successes
 Our team successfully replicated all the examples in this project and the HTML file that the professor provided on canvas. This includes creating the suffix array, finding the BWT string, calculating the counts and occurrences matrices, and finally encoding and decoding the BWT string. We built a simple driver function `main` that showcases the successes we had with the project. 
+* We successfully implemented the Burrows–Wheeler transform and applied run-length encoding to the transformed string.
+* The coding was relatively straightforward once we understood how the algorithm worked.
 
 # Struggles
-Description of the stumbling blocks the team experienced
+* We noticed that if the original string contains digits, our run-length decoder can confuse them with run counts. In the future, we could put the counts in brackets so that 1[3] means three copies of the digit 1. This would not be an issue with DNA.
 
 # Personal Reflections
 ## Group Leader
-Group leader's reflection on the project
+**Selin Uenal**  
+This project was the first one that I got to be a project leader, so 7 projects in to the semester, I finally got to learn about the other side of approving PRs in GitHub. By now, I was pretty familiar with the process, but I'm glad I got to get that prespective finally. This project overall was not too difficult, once I understood the algorithm a bit better. The HTML file and assigned readings were definitely extremely helpful, as well as learning from my group members' approach to the code. 
 
 ## Other member
 Ahmed Salman - Doing this algorithm by hand is so much easier to understand than just reading about it. If you didn't understand the algorithm or not confident enough in it, I highly recommend the good old pen and paper. While doing it by hand, you should be able to more clearly identify the required steps for each part of the process. Other than the concerns we had about performance, we also had difficulties considering different edge cases. I call them edge cases but they could be core functionalities of the program. The current program we developed cannot handle numbers in the original string, because the way the run length encoding works is by using integers to represent the counts of every letter in front of it, this means that a run length encoding of a string of integers such as `1122222222222211` would break the code as it would slap more integers next to it. This is especially true if there are long repeats more than 10 of any given integer. That said, if the code is used only for DNA, RNA, or protein sequences or any string that only contains letters, then it should be able to handle it correctly. I do have a simple idea that could fix that problem. What if the counts for each character was contained between brackets? for example, instead of writing `a2nb$2a` as the BWT for banana, why not `a(2)nb$(2)a`? How does that fix the numbers problem? like this, the BWT for the random numbers I wrote above would be `212$11121` which is pretty much impossible to read, but if it was written like this `(2)12$1(11)21` it becomes easier to tell that the number 1 at the start is repeated twice and the number 2 near the end is repeated 11 times. That was just a quick thought that I had. but as my team noted, this would increase the size of the run length encoded string quite a bit if there aren't many repeats so I am not sure how "worth it" it is. And since most of our work is on datasets that do not contain numbers we elected not to apply that.
+## Other members
+**Ahmed Salman**  
+TODO
+
+**Justin Gubbens**  
+TODO
 
 # Generative AI Appendix
-As per the syllabus
+Claude (Sonnet 5.5) was used to help make sure our pseudocode matched our final code. We gave Claude our pseudocode draft and finalized code and asked: "Does our pseusocode match our finalized code?". The output told us it mostly matched, with minor fixes, which were revised in the final version of this README.
