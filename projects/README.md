@@ -88,7 +88,7 @@ This project was the first one that I got to be a project leader, so 7 projects 
 **Ahmed Salman**  
 TODO
 
-**Justin Gubbens**  s
+**Justin Gubbens**  
 TODO
 
 # Generative AI Appendix
