@@ -73,7 +73,7 @@ FUNCTION main(reference, query)
 ```
 
 # Successes
-Description of the team's learning points
+Our team successfully replicated all the examples in this project and the HTML file that the professor provided on canvas. This includes creating the suffix array, finding the BWT string, calculating the counts and occurrences matrices, and finally encoding and decoding the BWT string. We built a simple driver function `main` that showcases the successes we had with the project. 
 
 # Struggles
 Description of the stumbling blocks the team experienced
@@ -83,7 +83,7 @@ Description of the stumbling blocks the team experienced
 Group leader's reflection on the project
 
 ## Other member
-Other members' reflections on the project
+Ahmed Salman - Doing this algorithm by hand is so much easier to understand than just reading about it. If you didn't understand the algorithm or not confident enough in it, I highly recommend the good old pen and paper. While doing it by hand, you should be able to more clearly identify the required steps for each part of the process. Other than the concerns we had about performance, we also had difficulties considering different edge cases. I call them edge cases but they could be core functionalities of the program. The current program we developed cannot handle numbers in the original string, because the way the run length encoding works is by using integers to represent the counts of every letter in front of it, this means that a run length encoding of a string of integers such as `1122222222222211` would break the code as it would slap more integers next to it. This is especially true if there are long repeats more than 10 of any given integer. That said, if the code is used only for DNA, RNA, or protein sequences or any string that only contains letters, then it should be able to handle it correctly. I do have a simple idea that could fix that problem. What if the counts for each character was contained between brackets? for example, instead of writing `a2nb$2a` as the BWT for banana, why not `a(2)nb$(2)a`? How does that fix the numbers problem? like this, the BWT for the random numbers I wrote above would be `212$11121` which is pretty much impossible to read, but if it was written like this `(2)12$1(11)21` it becomes easier to tell that the number 1 at the start is repeated twice and the number 2 near the end is repeated 11 times. That was just a quick thought that I had. but as my team noted, this would increase the size of the run length encoded string quite a bit if there aren't many repeats so I am not sure how "worth it" it is. And since most of our work is on datasets that do not contain numbers we elected not to apply that.
 
 # Generative AI Appendix
 As per the syllabus
