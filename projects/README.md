@@ -73,17 +73,23 @@ FUNCTION main(reference, query)
 ```
 
 # Successes
-Description of the team's learning points
+* We successfully implemented the Burrows–Wheeler transform and applied run-length encoding to the transformed string.
+* The coding was relatively straightforward once we understood how the algorithm worked.
 
 # Struggles
-Description of the stumbling blocks the team experienced
+* We noticed that if the original string contains digits, our run-length decoder can confuse them with run counts. In the future, we could put the counts in brackets so that 1[3] means three copies of the digit 1. This would not be an issue with DNA.
 
 # Personal Reflections
 ## Group Leader
-Group leader's reflection on the project
+**Selin Uenal**  
+This project was the first one that I got to be a project leader, so 7 projects in to the semester, I finally got to learn about the other side of approving PRs in GitHub. By now, I was pretty familiar with the process, but I'm glad I got to get that prespective finally. This project overall was not too difficult, once I understood the algorithm a bit better. The HTML file and assigned readings were definitely extremely helpful, as well as learning from my group members' approach to the code. 
 
-## Other member
-Other members' reflections on the project
+## Other members
+**Ahmed Salman**  
+TODO
+
+**Justin Gubbens**  s
+TODO
 
 # Generative AI Appendix
-As per the syllabus
+Claude (Sonnet 5.5) was used to help make sure our pseudocode matched our final code. We gave Claude our pseudocode draft and finalized code and asked: "Does our pseusocode match our finalized code?". The output told us it mostly matched, with minor fixes, which were revised in the final version of this README.
